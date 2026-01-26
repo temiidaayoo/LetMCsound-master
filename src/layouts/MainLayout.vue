@@ -32,6 +32,7 @@ const isHovering = ref(false)
 .main-content {
     flex: 1;
     transition: margin-left .3s ease;
+    
 }
 
 html, body, .app-container {
