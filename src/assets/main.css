@@ -1,0 +1,455 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0b0b0f;
+  color: #fff;
+}
+
+/* Layout principal */
+.app-container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #201728;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.logo-img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.menu a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu a:hover,
+.menu a.active {
+  background: #b259ff33;
+  color: #fff;
+}
+
+/* Main content */
+.main-content {
+  background: #0f0f14;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+i {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+
+.search-bar {
+  width: 60%;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #1d1d25;
+  color: #fff;
+}
+
+/* Banner (Estilo de la página Home) */
+.banner {
+  border-radius: 12px;
+  padding: 100px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.banner h1 {
+  font-size: 80px;
+  color: #fff;
+}
+
+.banner span {
+  color: #e6b5ff;
+}
+
+.banner small {
+  font-size: 70px;
+  color: #ddd;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 50px;
+}
+
+.section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Grid de tarjetas (Estilo de la página Home) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #1d1d25;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  margin-top: 0.5rem;
+  color: #e6b5ff;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.3rem;
+}
+
+
+/* ================================================= */
+/* =pp Styles para la Página de Perfil =pp */
+/* ================================================= */
+
+/* Cabecera del Perfil (Banner) */
+.profile-header {
+  position: relative;
+  height: 350px;
+  /* Ajusta la altura según necesites */
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: flex-end;
+  /* Alinea el contenido abajo */
+  padding: 2rem;
+  /* Sombra interior para que el texto sea legible sobre el fondo */
+  box-shadow: inset 0 -150px 150px -50px rgba(0, 0, 0, 0.8);
+}
+
+.profile-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  position: relative;
+}
+
+.profile-info {
+  max-width: 65%;
+}
+
+.artist-name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.artist-bio-container {
+  margin-bottom: 1rem;
+}
+
+.artist-bio {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.artist-tags {
+  display: block;
+  color: #e6b5ff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+}
+
+.edit-icon {
+  font-size: 1rem;
+  color: #888;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Foto de Perfil Hexagonal */
+.profile-hex-container {
+  position: relative;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.hexagon-border {
+  width: 160px;
+  height: 160px;
+  /* Usamos clip-path para la forma de hexágono */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: linear-gradient(45deg, #b259ff, #e6b5ff);
+  /* Degradado del borde */
+  padding: 4px;
+  /* Grosor del borde */
+  filter: drop-shadow(0 0 10px rgba(178, 89, 255, 0.7));
+}
+
+.hexagon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: #201728;
+}
+
+/* Estilos de Secciones (Projects/Popular) */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  font-size: 1.1rem;
+  color: #ccc;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.section-header i {
+  color: #888;
+  cursor: pointer;
+}
+
+/* Grid de Proyectos */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Nueva Tarjeta de Proyecto */
+.project-card {
+  height: 200px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Información superpuesta en la tarjeta */
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(11, 11, 15, 0.95) 20%, transparent);
+}
+
+.project-card h3 {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-card p {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-bottom: 0.8rem;
+}
+
+.project-card p.sub-info {
+  margin-top: -5px;
+}
+
+.project-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.project-stats i {
+  font-size: 0.8rem;
+  color: #888;
+  margin-right: 4px;
+  margin-top: 0;
+}
+
+/* Estilos específicos para la tarjeta "activa" en Popular */
+.active-play {
+  border: 2px solid #b259ff;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  font-size: 3rem;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.project-stats-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  right: 15px;
+}
+
+.project-stats-bottom i {
+  font-size: 0.8rem;
+  color: #888;
+  margin-right: 4px;
+  margin-top: 0;
+}
+
+/* --- NUEVOS ESTILOS PARA EL SIDEBAR COLAPSABLE --- */
+
+/* Estilo del botón de alternancia */
+.toggle-btn {
+  all: unset;
+  /* Quita todos los estilos predeterminados del botón */
+  color: #e6b5ff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: auto;
+  /* Empuja el botón hacia la parte inferior del sidebar */
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background 0.2s, transform 0.3s;
+  border-top: 1px solid #333;
+  /* Separador visual */
+}
+
+
+/* --- ESTILOS PARA EL SIDEBAR COLAPSADO (Añadir o asegurar) --- */
+
+/* 1. Estado por defecto (Cerrado) */
+.app-container.collapsed {
+  /* El sidebar se reduce a 70px */
+  grid-template-columns: 70px 1fr;
+}
+
+/* 2. Oculta el contenido con el sidebar cerrado */
+
+.app-container.collapsed .logo-container,
+.app-container.collapsed .menu a span {
+  /* Oculta el texto del menú y el logo grande */
+  display: none;
+}
+
+.app-container.collapsed .logo-img {
+  /* Reduce el tamaño del logo */
+  width: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container.collapsed .menu a {
+  /* Centra los iconos cuando no hay texto */
+  text-align: center;
+  padding: 10px 0;
+}
+
+.app-container.collapsed .menu a i {
+  margin-right: 0;
+  /* Elimina el margen derecho del ícono */
+}
+
+/* 3. Gira el ícono del botón cuando el sidebar está cerrado (para indicar que se abre) */
+.app-container.collapsed .toggle-btn i {
+  transform: rotate(180deg);
+}
+
+/* Estilos del botón (si no los tenías) */
+.toggle-btn {
+  all: unset;
+  color: #e6b5ff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: auto;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background 0.2s, transform 0.3s;
+  border-top: 1px solid #333;
+}
+
+.toggle-btn:hover {
+  background: #1d1d25;
+}
