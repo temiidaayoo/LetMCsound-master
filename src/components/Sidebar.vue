@@ -43,13 +43,16 @@
 
 <style scoped>
 .sidebar {
-    width: 70px;
-    height: 100vh;
-    transition: width .3s ease;
-    overflow-y: auto;
-    overflow-x: hidden;
-    flex-shrink: 0; /* 🔥 IMPORTANTE: evita que el sidebar se comprima */
+  position: fixed;        /* 🔥 sidebar fijo */
+  top: 0;
+  left: 0;
+  width: 70px;            /* colapsado */
+  height: 100vh;          /* ocupa toda la pantalla */
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width .3s ease;
 }
+
 
 .sidebar:hover {
     width: 220px;

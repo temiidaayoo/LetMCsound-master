@@ -20,23 +20,22 @@ const isHovering = ref(false)
 
 <style scoped>  
 .app-container {
-    display: flex;
-    height: 100vh;
+  display: flex;
 }
 
+.app-container.collapsed .main-content {
+  margin-left: 70px;      /* ancho del sidebar colapsado */
+}
 
 .app-container:not(.collapsed) .main-content {
-    margin-left: 220px;
+  margin-left: 220px;     /* ancho del sidebar expandido */
 }
 
 .main-content {
-    flex: 1;
-    transition: margin-left .3s ease;
-    
-}
-
-html, body, .app-container {
-    height: 100%;
+  width: 100%;
+  overflow-y: auto;       /* 🔥 el scroll ocurre aquí */
+  height: 100vh;          /* ocupa toda la pantalla */
+  transition: margin-left .3s ease;
 }
 
 </style>
