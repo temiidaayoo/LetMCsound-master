@@ -4,6 +4,7 @@ import ProfileView from '../views/ProfileView.vue'
 import SoundView from '../views/SoundView.vue'
 import MusiciansView from '../views/MusiciansView.vue'
 import LyricsView from '../views/LyricsView.vue'
+import ConfigView from '@/views/ConfigView.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
             path: '/lyrics',
             name: 'lyrics',
             component: LyricsView
+        },
+        {
+            path: '/configuration',
+            name: 'configuration',
+            component: ConfigView
         }
     ]
 })

@@ -42,10 +42,6 @@
     </div>
 
     <div v-else class="profile-content animate-fade-in">
-        
-        <div class="logout-header">
-            <button @click="logout" class="logout-btn">Cerrar Sesión <i class="ri-logout-box-r-line"></i></button>
-        </div>
 
         <section class="profile-header-modern">
           <div class="header-content">

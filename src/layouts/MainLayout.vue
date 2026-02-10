@@ -1,9 +1,13 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import Sidebar from '../components/Sidebar.vue'
 import Topbar from '../components/Topbar.vue'
+import { useRoute } from 'vue-router'
 
 const isHovering = ref(false)
+const route = useRoute()
+
+const showTopbar = computed(() => route.name !== 'profile') // Oculta el Topbar solo en la vista de perfil
 </script>
 
 <template>
@@ -12,7 +16,7 @@ const isHovering = ref(false)
         <Sidebar @hover="isHovering = $event" />
 
         <main class="main-content">
-            <Topbar />
+            <Topbar v-if="showTopbar" />
             <router-view />
         </main>
     </div>

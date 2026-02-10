@@ -1,5 +1,7 @@
 <script setup>
+import { useTheme } from '../composables/useTheme'
 
+const { theme, toggleTheme } = useTheme()
 </script>
 
 <template>
@@ -35,7 +37,9 @@
             <i class="ri-disc-fill"></i> <span>Musicians</span>
         </router-link>
 
-        <a href="#"> <i class="ri-settings-3-fill"></i> <span>Configuration</span></a>
+        <router-link to="/configuration" active-class="active"> 
+            <i class="ri-settings-3-fill"></i> <span>Configuration</span>
+        </router-link>
         </nav>
 
     </aside>
@@ -52,7 +56,6 @@
   overflow-x: hidden;
   transition: width .3s ease;
 }
-
 
 .sidebar:hover {
     width: 220px;
@@ -83,6 +86,39 @@
         /* Ajustar iconos */
 .menu i {
     font-size: 22px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    cursor: pointer;
+    color: var(--text-muted, #ccc);
+    transition: all 0.2s;
+    margin-top: auto;
+    border-top: 1px solid var(--border-color, #333);
+}
+
+.theme-toggle-btn:hover {
+    color: var(--text-primary, #fff);
+    background: var(--bg-secondary, rgba(255, 255, 255, 0.05));
+}
+
+.theme-toggle-btn i {
+    font-size: 22px;
+}
+
+.theme-toggle-btn span {
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+}
+
+.sidebar:hover .theme-toggle-btn span {
+    opacity: 1;
 }
 </style>
 
